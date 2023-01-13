@@ -1,0 +1,146 @@
+* {
+    margin: 0;  /*Tira os Espaços de margem*/
+    padding: 0; /*Tira o preenchimento interno*/
+    box-sizing: border-box; /*limita o tamanho da caixa, atua no padding, defini um tamanho fixo*/
+}
+body {
+    background-image: url(https://images.unsplash.com/photo-1587400873582-230980eb46eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    
+    height: 100vh;
+    width: 100vw;
+    display: flex;   /*aplica flex no container*/
+    flex-direction: column; /*Aplica disposição Horizontal nos Itens, em forma de linha*/
+    justify-content: center; /*Alinhamento na Horizontal*/
+    align-items: center; /*Alinhamento vertical*/
+}
+.form {
+    opacity: 0.8;
+    height: 19.5rem;
+    width: 25rem;
+    padding: 1rem;
+    border-radius: 0.312rem;
+    background-color: white;
+    position: relative;  
+}
+.form::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: white;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: rotate(-1.2deg); 
+}
+.form::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: white;
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    transform: rotate(1.2deg);
+}
+#login, #password {
+    padding: 0.562rem 0.812rem;
+    height: 2.18rem;
+    width: 22.81rem;
+}
+div .access .button{
+    height: 2.18rem;
+    width: 22.81rem;
+    padding: 0.625rem 1.25rem;
+    font: 0.812rem "Helvetica Neue", sans-serif;
+    cursor: pointer;
+    background-color: rgb(57, 109, 187);
+    border-style: none;
+    border-radius: 0.312rem;
+    color: white;
+}
+div .campo{
+    margin-bottom: 0.812rem;
+    outline: none;
+}
+div .campo:focus{
+    outline: none;
+}
+div .divider{
+    margin-top: 0.937rem;
+    margin-bottom: 0.937rem;
+    opacity: 0.5;
+}
+div .smallheader, .smallfooter {
+    text-align: center;
+    font: 1.06rem "plus jakarta sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    -webkit-font-smoothing: antialiased;
+}
+.divider{
+    height: 1px;
+    background: rgb(0, 0, 0);
+}
+.icons{   
+    height: 3.75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.svg_android, .svg_apple {
+    height: 2.5rem;
+    width: 2.5rem;
+    position: relative;
+}
+.svg_apple, .svg_android {
+    margin: 0 0.937rem;
+}
+.svg_android::before{
+    content: 'Apple Store';
+    position: absolute;
+    background: black;
+    color: #fff;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    border-radius: 4px;
+    transition: 350ms;
+    opacity: 0;
+    
+    transform: translateY(15px);
+    z-index: 1;
+  }
+  .svg_android:hover::before{
+    opacity: 1;
+    transform: translateY(-38px);
+  }
+  .svg_apple::before{
+    content: 'Apple Store';
+    position: absolute;
+    background: black;
+    color: #fff;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    border-radius: 4px;
+    transition: 350ms;
+    opacity: 0;
+    
+    transform: translateY(15px);
+    z-index: 1;
+  }
+  .svg_apple:hover::before{
+    opacity: 1;
+    transform: translateY(-38px);
+  }
